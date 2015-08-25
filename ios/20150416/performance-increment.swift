@@ -27,6 +27,7 @@ func executeGenerics<T: Incrementable>(count: T) {
 
 var times = 1000000
 
+///////////////////////  Protocol
 var count1 = Count()
 var start1 = NSDate()
 for i in 0...times {
@@ -34,6 +35,8 @@ for i in 0...times {
 }
 var elapsed1 = NSDate().timeIntervalSinceDate(start1)
 println("executeProtocol: \(elapsed1)")
+
+///////////////////////  Generics
 
 var count2 = Count()
 var start2 = NSDate()

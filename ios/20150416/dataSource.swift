@@ -41,7 +41,7 @@ class BasicTableViewDataSource<T>: NSObject, UITableViewDataSource {
     }
 }
 
-//// somewhere in View Controller
+//// somewhere, ex: viewDidLoad, in View Controller
 
 var tableView = UITableView()
 var dataSource = BasicTableViewDataSource<String>()
@@ -57,11 +57,12 @@ dataSource.cellForRowClosure = { (cell:UITableViewCell, indexPath: NSIndexPath, 
     return cell
 }
 
+// you can set String Array
+dataSource.items = ["A", "B", "C"]
+
 // you can't set Int Array
 dataSource.items = [1,2,3,4,5]
 
-// you can set String Array
-dataSource.items = ["A", "B", "C"]
 
 
 
